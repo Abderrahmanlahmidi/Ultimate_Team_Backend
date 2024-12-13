@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.zone:hover{
+	filter: drop-shadow(0 -5px 7px rgba(184, 241, 210, 0.96)) drop-shadow(0 8px 5px rgba(199, 224, 247, 0.575));
+
+}
+
+.player {
+	width: 140px;
+	max-width: 100%;
+	height: auto;
+	background-size: cover;
+	background-position: center;
+	padding: 1.2rem 0;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+
+.player:hover {
+
+  transform: scale(1.05);
+		
+}
+  
+#players_cards {
+	max-height: 320px; 
+	overflow-y: auto; 
+	position: relative; 
+
+}
+
+
+#players_cards {
+	max-height: 320px; 
+	overflow-y: auto;  
+	position: relative;
+	padding-right: 10px; 
+	scrollbar-width: thin; 
+	scrollbar-color: #fe3c00 #404040; 
+  }
+  
+
+  #players_cards::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  #players_cards::-webkit-scrollbar-thumb {
+	background-color: #fe3c00;
+	border-radius: 10px;
+	border: 2px solid #404040;
+  }
+  
+  #players_cards::-webkit-scrollbar-track {
+	background-color: #404040; 
+	border-radius: 10px;
+  }
+  
+  
+

@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  php:
+    image: php:apache
+    container_name: UltimateTimeAppContainer
+    ports:
+      - "8081:80"
+    volumes:
+     - ./public:/var/www/html
+    environment:
+      MYSQL_HOST: UltimateTimeApp
+      MYSQL_DATABASE: UltimateTimeDb
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: mxw-234-mxl
+  mysql:
+    image: mysql:latest
+    container_name: UltimateTimeDbContainer
+    environment:
+      MYSQL_ROOT_PASSWORD: mxw-234-mxl
+      MYSQL_DATABASE: UltimateTimeDb
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: mxw-234-mxl
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3309:3309"
+
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      - PMA_ARBITRARY=1
+
+networks:
+  harvard_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
