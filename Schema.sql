@@ -1,7 +1,0 @@
-CREATE TABLE Manchester(
- 
- id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
- 
-
-
-);
