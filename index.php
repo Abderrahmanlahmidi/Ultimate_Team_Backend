@@ -3,11 +3,38 @@
 include './helpers/helpers.php';
 $background_url = loadImages("background");
 $stadium = loadImages("stadium");
-$placeholder =loadImages("placeholder-card");
+$placeholder = loadImages("placeholder-card");
+
+require_once("./config/db.php");
+
+$query = "SELECT * FROM teams.manchester";
+$result = mysqli_query($con, $query);
+
+include loadPartials("head");
+
+if(isset($_POST['submit'])){
+
+  $name = $_POST['name'];
+  $position = $_POST['position'];
+  $club = $_POST['club'];
+  $rating = $_POST['rating'];
+  $pace = $_POST['pace'];
+  $shooting = $_POST['shooting'];
+  $defending = $_POST['defending'];
+  $passing = $_POST['passing'];
+  $dribbling = $_POST['dribbling'];
+  $physical = $_POST['physical'];
+  $photo = $_POST['photo'];
+  $logo = $_POST['logo'];
+
+
+
+}
+
+
 
 ?>
-  
-<?= include loadPartials("head")  ?>   
+
 <body>
    <main id="main_background"  class="main_background w-full flex flex-col px-6 md:px-[120px] py-[50px]">
           <?= include loadPartials("titles")  ?>   
@@ -18,8 +45,7 @@ $placeholder =loadImages("placeholder-card");
             </div>
             <img src="<?php echo $stadium  ?>" class="w-full h-auto mt-4">
          </div>
-         <?= include loadPartials("choices") ?>   
-         
+          <?= include loadPartials("choices") ?>   
           <div id="overlay" class="cursor-pointer fixed gap-5 inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
           
           </div>

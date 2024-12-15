@@ -4,6 +4,21 @@
 @tailwind utilities;
 
 
+.main_background{ 
+	background-image: 
+	  linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), 
+	  url("../assets/img/background.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.zone{
+  background-image: url("../assets/img/placeholder-card.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
 .zone:hover{
 	filter: drop-shadow(0 -5px 7px rgba(184, 241, 210, 0.96)) drop-shadow(0 8px 5px rgba(199, 224, 247, 0.575));
 
