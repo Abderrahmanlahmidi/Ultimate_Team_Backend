@@ -3,9 +3,10 @@
 
 $con = mysqli_connect("localhost", "root", "123123321321@instance");
 
-if(!$con){
-    die("Connection Error");
+if (!$con) {
+    echo "Connection failed: " . mysqli_connect_error();
 }
+
 
 
 ?>

@@ -8,4 +8,6 @@ function loadImages($image_name){
    return "./public/images/{$image_name}.png";
 }
 
+
+
 ?>

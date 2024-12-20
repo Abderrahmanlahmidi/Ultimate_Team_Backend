@@ -5,6 +5,7 @@ const cancelAddBtn = document.getElementById("cancer_add_button");
 const playersCards = document.getElementById("players_cards");
 const zones = document.querySelectorAll(".zone");
 const number_jeour = document.getElementById("number_jeour");
+const add_overlay = document.getElementById("add_overlay");
 let allPlayers = []
 const formData = {};
 const newData = [];
@@ -13,20 +14,21 @@ let numberFields = [];
 
 
 
+new_player.addEventListener("click", function(){
+  overlay.classList.remove("hidden");
+  
+  add_overlay.classList.remove("hidden");
+  add_overlay.classList.add("flex");
+})
 
 
+cancelAddBtn.addEventListener("click", function(){
+overlay.classList.add("hidden");
 
-addPlayer.addEventListener("click", () => {
-  addOverlay.classList.remove("hidden");
-  addOverlay.classList.add("flex");
-});
+add_overlay.classList.add("hidden");
+add_overlay.classList.remove("flex");
 
-
-cancelAddBtn.addEventListener("click", () => {
-  addOverlay.classList.add("hidden");
-  addOverlay.classList.remove("flex");
-});
-
+})
 
 
 document.getElementById("add_form").addEventListener("submit", (event) => {

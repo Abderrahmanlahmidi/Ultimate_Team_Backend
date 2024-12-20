@@ -9,10 +9,10 @@
       "server": "localhost",
       "port": 33060,
       "driver": "MySQL",
-      "name": "teamsDb",
-      "database": "teams",
-      "username": "root",
+      "name": "ultimate_teams_connection",
+      "database": "ultimate_teams",
       "password": "123123321321@instance",
+      "username": "root",
       "connectionTimeout": 1.111111111111111e27
     }
   ]
