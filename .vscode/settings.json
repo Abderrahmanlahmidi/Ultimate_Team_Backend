@@ -1,0 +1,19 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "xprotocol",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 33060,
+      "driver": "MySQL",
+      "name": "ultimate_teams_connection",
+      "database": "ultimate_teams",
+      "password": "123123321321@instance",
+      "username": "root",
+      "connectionTimeout": 1.111111111111111e27
+    }
+  ]
+}
